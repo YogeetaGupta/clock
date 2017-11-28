@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+           *{
+               background-image: url(./water.jpg);
+           }
+            div.clock{
+                position: relative;
+                color: black;
+                margin: 0px auto;
+                height: 450px;
+                width: 450px;
+                top: 80px;
+                left: -250px;
+            }
+            div.clock img{
+                position: absolute;
+                height: 450px;
+                width: 450px;
+            }
+            div.clock div.hour{
+                height: 50px;
+                width: 80px;
+                position: absolute;
+                left: 40px;
+                top: 60px;
+                font-size: 40px;
+                line-height: 50px;
+                text-align: center;
+                color: hotpink;
+                background-color: black;
+                border-radius: 20px;
+            }
+            div.clock div.minute{
+                height: 50px;
+                width: 80px;
+                position: absolute;
+                left: 330px;
+                top: 60px;
+                font-size: 40px;
+                line-height: 50px;
+                text-align: center;
+                color: yellow;
+                background-color: black;
+                border-radius: 20px;
+            }
+            div.clock div.second{
+                height: 50px;
+                width: 90px;
+                position: absolute;
+                left: 180px;
+                top: 250px;
+                font-size: 40px;
+                line-height: 50px;
+                text-align: center;
+                color: blue;
+                background-color: black;
+                border-radius: 20px;
+            }
+            div.clock div.diem{
+                height: 50px;
+                width: 90px;
+                position: absolute;
+                left: 180px;
+                top: 320px;
+                font-size: 25px;
+                line-height: 50px;
+                text-align: center;
+                color: grey;
+                background-color: black;
+                border: 2px solid red;
+                border-radius: 50px
+            }
+        </style>
+    </head>
+    <body>
+        <div class="clock" id="clock">
+           <img src="./micke.png">
+           <div class="hour" id="hour"></div>
+           <div class="minute" id="minute"></div>
+           <div class="second" id="second"></div>
+           <div class="diem" id="diem"></div>
+        </div>
+        <script>
+            function time()
+            {
+                var time = new Date();
+                var diem= "am";
+                var h= time.getHours();
+                var m= time.getMinutes();
+                var s= time.getSeconds();
+                if(h==12)
+                {
+                    h=12;
+                }
+                else if (h>12)
+                {
+                    h=h-12;
+                    diem="pm";
+                }
+            if(h<10)
+            {
+                h="0"+h;
+            }
+            if(m<10)
+            {
+                m="0"+m;
+            }
+            if(s<10)
+            {
+                s="0"+s;
+            }
+            setTimeout("time()",1000);
+            var timeShowh= document.getElementById('hour');
+            timeShowh.innerHTML=h;
+            var timeShowm= document.getElementById('minute');
+            timeShowm.innerHTML=m;
+            var timeShows= document.getElementById('second');
+            timeShows.innerHTML=s;
+            var timeShowd= document.getElementById('diem');
+            timeShowd.innerHTML=diem;
+        }
+        time();
+        </script>
+    </body>
+</html>
