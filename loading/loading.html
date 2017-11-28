@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+        body{
+            background-color: grey;
+            opacity: 0.7;
+        }
+        div.container{
+            margin:0px auto;
+            height: 240px;
+            width:240px;
+            position:relative;
+            top:200px;
+        }
+        div.one{
+            position:absolute;
+            top:95px;
+            left:95px;
+            width:20px;
+            height: 20px;
+            background-image: url("./image/1.jpg");
+            border-radius: 20px;
+            animation-name: anim1;
+            animation-delay: 0s;
+            animation-duration: 3s;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        div.two{
+            position:absolute;
+            top:95px;
+            left:95px;
+            width:20px;
+            height: 20px;
+            background-image: url("./image/1.jpg");            
+            border-radius: 20px;
+            animation-name: anim2;
+            animation-duration: 3s;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+        }
+       div.three{
+            position:absolute;
+            top:95px;
+            left:95px;
+            width:20px;
+            height: 20px;
+            background-image: url("./image/1.jpg");            
+            border-radius: 20px;
+            animation-name: anim3;
+            animation-delay: 0s;
+            animation-duration: 3s;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        div.four{
+            position:absolute;
+            top:95px;
+            left:95px;
+            width:20px;
+            height: 20px;
+            background-image: url("./image/1.jpg");            
+            border-radius: 20px;
+            animation-name: anim4;
+            animation-delay: 0s;
+            animation-duration: 3s;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes anim1{
+            0%{
+                transform-origin:50% -100%;
+                transform:rotate(0deg)
+            }
+            100%{
+                transform-origin:50% -100%;
+                transform:rotate(360deg)
+            }
+
+        }
+        @keyframes anim2{
+            0%{
+                transform-origin:50% 200%;
+                transform:rotate(0deg)
+            }
+            100%{
+                transform-origin:50% 200%;
+                transform:rotate(360deg)
+            }
+
+        }
+        @keyframes anim3{
+            0%{
+                transform-origin:-100% 50%;
+                transform:rotate(0deg)
+            }
+            100%{
+                transform-origin:-100% 50%;
+                transform:rotate(360deg)
+            }
+
+        }
+        @keyframes anim4{
+            0%{
+                transform-origin:200% 50%;
+                transform:rotate(0deg)
+            }
+            100%{
+                transform-origin:200% 50%;
+                transform:rotate(360deg)
+            }
+
+        }
+
+       p{
+           line-height: 450px;
+           text-indent: 30px;
+           font-size: 20px;
+       }
+        
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <p>loading please wait...</p>
+        </div>
+    </body>
+</html>
