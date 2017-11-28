@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: rebeccapurple;
+        }
+        div.walk{
+            height: 450px;
+            width: 350px;
+            background-image: url("./WalkingGirl2-2400px.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 20px;
+            margin-left: 970px;
+            border-bottom: 10px solid black;
+            animation-name: girl;
+            animation-duration: 1s;
+            animation-timing-function: steps(4);
+            animation-iteration-count: infinite;
+        }
+        @keyframes girl{
+            from{
+                background-position: 0px;
+            }
+            to{
+                background-position: -1450px;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="walk">
+
+        </div>
+    </body>
+</html>
